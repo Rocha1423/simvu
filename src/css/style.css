@@ -4,8 +4,8 @@
 {
     
     --menuWidth: 120px;
-    --colorPrimary: #00d1a4;
-    --colorPrimaryDark: #00a782;
+    --colorPrimary: #15caa3;
+    --colorPrimaryDark: #008f70;
 
     font-family: 'Noto Sans', sans-serif;
 }
@@ -57,19 +57,19 @@ body::-webkit-scrollbar {
 
 #css_body
 {
-    width: calc(100vw - var(--menuWidth));
+    width: 100vw;
     height: 100vh;
+    display: flex;
     overflow-y: auto;
-    padding: 0 15px;
     background-color: #fafafa;
     position: relative;
 }
 
 .css_color
 {
-    width: calc(100vw - var(--menuWidth));
-    height: 250px;
-    background: linear-gradient(90deg, var(--colorPrimary), var(--colorPrimaryDark));
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(45deg, var(--colorPrimary), var(--colorPrimaryDark));
     position: absolute;
     top: 0; left: 0;
 }
@@ -91,14 +91,14 @@ body::-webkit-scrollbar {
 {
     position: relative;
     width: 100%;
-    padding: 80px 0 0;
 }
 
 .css_content .css_title
 {
     margin: 30px 0;
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 600;
+    text-shadow: 0 0 6px #000a;
 }
 
 .css_title.white
@@ -108,41 +108,76 @@ body::-webkit-scrollbar {
 
 .css_card
 {
-    width: calc(100% - 30px );
-    padding: 15px 20px;
+    padding: 15px 20px 0;
     border-radius: 6px;
-    background: #fff;
-    border: 1px solid #dfdfdf;
-    box-shadow: 0 0 12px #00000044;
-    margin: 10px 0;
+    background: #222;
+    color: white;
+    border: 1px solid #000;
+    box-shadow: 0 2px 8px #000a;
+    margin: 10px 0 30px;
 
     display: flex;
 }
 
 .css_card .css_info
 {
-    width: 20%;
+    width: 14%;
     display: flex;
     flex-flow: column;
 }
 
 .css_card .css_info h2
 {
-    color: gray;
+    color: white;
+    box-shadow: 0 0px 6px #0000;
+    font-size: 2em;
+    margin: 0 0 14px;
 }
 
+.css_card .css_info label
+{
+    width: fit-content;
+}
+
+.css_card .css_info label strong
+{
+    color: #fffa;
+}
+
+.css_card .css_info label span
+{
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    border-radius: 50%;
+    border: 1px solid #0003;
+    float: right;
+    margin-left: 10px;
+}
+
+.css_card .css_info label span.green
+{
+    background-color: #37e470;
+    box-shadow: 0 0 12px #37e470;
+}
+.css_card .css_info label span.yellow
+{
+    background-color: #e4d337;
+    box-shadow: 0 0 12px #e4d337;
+}
 .css_card .css_graphs
 {
-    width: 80%;
+    width: 86%;
     display: flex;
 }
 
 .css_graphs .graph
 {
     width: 40%;
-    height: 160px;
+    height: 130px;
     display: flex;
-    padding: 0 30px;
+    padding: 0 0 0 30px;
 }
 
 .css_graphs .graph:last-child
@@ -153,16 +188,16 @@ body::-webkit-scrollbar {
 
 .css_graphs .graph canvas
 {
-    height: 140px;
+    height: 110px;
     width: 70%;
 }
 
 .css_graphs .graph .data
 {
-    width: 30%;
+    width: 100px;
     height: fit-content;
     font-weight: bold;
-    padding: 40px 0;
+    padding: 6px 0;
     display: flex;
     flex-direction: column;
 }
@@ -170,23 +205,29 @@ body::-webkit-scrollbar {
 .css_graphs .graph .data label
 {
     width: 100%;
-    font-size: 16px;
-    color: #666;
+    font-size: 1.4em;
+    color: #fffa;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .css_graphs .graph .data span
 {
     width: 100%;
-    font-size: 48px;
+    font-size: 56px;
+    z-index: 10;
 }
 
 .css_graphs .graph .icon
 {
-    font-size: 110px;
-    color: #999;
-    width: 70%;
-    margin-top: 28px;
+    background-color: #fffa;
+    border-radius: 8px;
+    width: 100px;
+    height: 80px;
+    margin: 18px 0 0 20px;
     transition: .5s;
+    box-shadow: 0 0 6px #000;
 }
 
 .css_card.login
@@ -222,4 +263,67 @@ input
 {
     background-color: var(--colorPrimary);
     box-shadow: 0 0 0px #00000044;
+}
+
+.css_panel
+{
+    height: 100vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.css_panel:not(:last-child)
+{
+    border-right: 1px solid #0004;
+}
+
+.css_panel:nth-child(1)
+{
+    width: 300px;
+    background-color: #333;
+}
+
+.css_panel:nth-child(2)
+{
+    width: calc(100% - 700px);
+    background-color: #444;
+}
+
+.css_panel:nth-child(3)
+{
+    width: 400px;
+    background-color: #333;
+    padding: 45px 0 0;
+}
+
+.css_titleBar
+{
+    border-bottom:1px solid #0006;
+    background-color: #444;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.log
+{
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: white;
+    font-weight: lighter;
+    padding: 4px 15px ;
+    font-size: .8em;
+}
+.log:not(:last-child)
+{
+    border-bottom:1px solid #0003;
 }

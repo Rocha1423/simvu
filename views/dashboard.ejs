@@ -1,71 +1,98 @@
-
 <!DOCTYPE html>
 
 <html>
+
 <head>
   <meta charset="utf-8">
 
   <title>SIMVU</title>
   <link rel="stylesheet" href="/css/style.css">
   <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-    <nav id="css_menu">
-      <div class='item'>
-        <ion-icon name='heart'></ion-icon>
-        Dashboard
-      </div>
-    </nav>
-    <nav id="css_body">
-      <div class="css_topBar">
-        <h3>Dashboard</h3>
-      </div>
+  <nav id="css_body">
+    <div class="css_panel"></div>
+    <div class="css_panel">
       <div class="css_color"></div>
       <div class="css_content" id='js_content'>
         <h1 class='css_title white'>Unidades</h1>
         <div class="css_card">
           <div class="css_info">
             <h2>992834</h2>
-            <label for=""><strong>A cargo de: </strong>Isabel Montoya</label>
-            <label for=""><strong>Estado: </strong>Optimo</label>
+            <label for=""><strong>Estado</strong></label>
+            <label for="">Optimo<span class="green"></span></label>
           </div>
           <div class="css_graphs">
             <div class="graph">
-            <div class="data">
-              <label>Temperatura</label>
-              <span id="tempLabel"></span>
-            </div>
-            <canvas id='chart1'></canvas>
+              <div class="data">
+                <label>Temperatura</label>
+                <span id="tempLabel"></span>
+              </div>
+              <canvas id='chart1'></canvas>
             </div>
             <div class="graph">
-            <div class="data">
-              <label>Humedad</label>
-              <span id="humLabel"></span>
+              <div class="data">
+                <label>Humedad</label>
+                <span id="humLabel"></span>
+              </div>
+              <canvas id='chart2'></canvas>
             </div>
-            <canvas id='chart2'></canvas>
-            </div>
-            
+
             <div class="graph">
               <div class="data">
                 <label>Rotacion</label>
                 <span id="rotLabel"></span>
               </div>
-              <ion-icon class="icon" name='square' id="chart3"></ion-icon>
+              <span class="icon" id="chart3"></span>
+            </div>
+          </div>
+        </div>
+        <div class="css_card">
+          <div class="css_info">
+            <h2>432256</h2>
+            <label for=""><strong>Estado</strong></label>
+            <label for="">Medio<span class="yellow"></span></label>
+          </div>
+          <div class="css_graphs">
+            <div class="graph">
+              <div class="data">
+                <label>Temperatura</label>
+                <span id="tempLabel2"></span>
               </div>
+              <canvas id='chart4'></canvas>
+            </div>
+            <div class="graph">
+              <div class="data">
+                <label>Humedad</label>
+                <span id="humLabel2"></span>
+              </div>
+              <canvas id='chart5'></canvas>
+            </div>
+
+            <div class="graph">
+              <div class="data">
+                <label>Rotacion</label>
+                <span id="rotLabel2"></span>
+              </div>
+              <span class="icon" id="chart6"></span>
+            </div>
           </div>
         </div>
       </div>
-    </nav>
+    </div>
+    <div class="css_panel" id="log">
+      <div class="css_titleBar">Log</div>
+    </div>
+  </nav>
 
 
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="/js/dashboard.js"></script>
 </body>
+
 </html>
