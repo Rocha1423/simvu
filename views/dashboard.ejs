@@ -15,7 +15,18 @@
 
 <body>
   <nav id="css_body">
-    <div class="css_panel"></div>
+    <div class="css_panel">
+      <img src="https://mh-2-stockagency.panthermedia.net/media/previews/0011000000/11586000/11586559_high.jpg" alt="" class="css_avatar">
+      <h2 class="css_username">Sam Smith</h2>
+      <span class="css_config">Configuración</span>
+      <hr>
+      <div class="css_menu">
+        <div class="css_menuItem active">Dashboard</div>
+        <div class="css_menuItem" onclick="modal('js_modalDevices')">Dispositivos</div>
+        <div class="css_menuItem" onclick="modal('js_modalUsers')">Usuarios</div>
+      </div>
+      
+    </div>
     <div class="css_panel">
       <div class="css_color"></div>
       <div class="css_content" id='js_content'>
@@ -89,6 +100,83 @@
     </div>
   </nav>
 
+  <!--MODALS-->
+
+  <div class="css_modalContainer" id="js_modalDevices" style="display: none;">
+    <div class="css_modal">
+      <div class="head"><h4>Dispositivos</h4></div>
+      <div class="content" style="display: flex;">
+        <div class="css_modalList">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>
+                  Dispositivo
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>123145</td>
+              </tr>
+              <tr>
+                <td>981237</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="css_modalForm">
+          <h3>Nuevo Dispositivo</h3>
+          <label>ID</label>
+          <input type="tel">
+          <label>Responsable</label>
+          <input type="text">
+          <button class="primary w100">Guardar</button>
+        </div>
+      </div>
+      <div class="footer">
+        <button class="cancel" onclick="closeModal('js_modalDevices')">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="css_modalContainer" id="js_modalUsers" style="display: none;">
+    <div class="css_modal">
+      <div class="head"><h4>Usuarios</h4></div>
+      <div class="content" style="display: flex;">
+        <div class="css_modalList">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>
+                  Usuarios
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>admin</td>
+              </tr>
+              <tr>
+                <td>eployeee</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="css_modalForm">
+          <h3>Nuevo Usuario</h3>
+          <label>Usuario</label>
+          <input type="tel">
+          <label>Contraseña</label>
+          <input type="text">
+          <button class="primary w100">Guardar</button>
+        </div>
+      </div>
+      <div class="footer">
+        <button class="cancel" onclick="closeModal('js_modalUsers')">Cerrar</button>
+      </div>
+    </div>
+  </div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>

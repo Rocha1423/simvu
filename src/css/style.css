@@ -327,3 +327,213 @@ input
 {
     border-bottom:1px solid #0003;
 }
+
+
+/*PANEL PROFILE*/
+
+
+.css_avatar
+{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 40px calc(50% - 100px) 20px;
+    border-radius: 50%;
+}
+
+.css_username
+{
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+}
+
+.css_config
+{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: var(--colorPrimary);
+    cursor: pointer;
+}
+
+.css_menu
+{
+    display: flex;
+    flex-direction: column;
+    width: calc(100% + 30px);
+    margin: 0 -15px;
+    height: fit-content;
+}
+
+.css_menuItem
+{
+    width: 100%;
+    color: white;
+    padding: 10px 15px;
+    border-bottom: 1px solid #fff4;
+    cursor: pointer;
+}
+
+.css_menuItem:hover
+{
+    background-color: #444;
+}
+
+.css_menuItem.active
+{
+    color: var(--colorPrimary);
+}
+
+/*modals*/
+
+.css_modalContainer
+{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1000;
+    top: 0;left: 0;
+    background-color: #0006;
+    backdrop-filter: blur(4px);
+}
+
+.css_modal
+{
+    width: 900px;
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: #444;
+    border: 1px solid #0003;
+
+    margin: 80px auto;
+
+    animation-name: modal;
+    animation-duration: .3s;
+    animation-fill-mode: both;
+}
+
+@keyframes modal
+{
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.css_modal .head
+{
+    width: 100%;
+    color: white;
+    padding: 10px 15px;
+    border-bottom: 1px solid #fff4;
+    box-sizing: border-box;
+}
+
+.css_modal .head h4
+{
+    margin: 0;
+}
+
+.css_modal .content
+{
+    width: 100%;
+    color: white;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+.css_modal .footer
+{
+    width: 100%;
+    color: white;
+    padding: 10px 15px;
+    border-top: 1px solid #fff4;
+    box-sizing: border-box;
+}
+
+button
+{
+    background-color: #aaa;
+    border-radius: 3px;
+    border: .7px solid #0003;
+    font-size: 1.1em;
+    color: white;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+button.primary
+{
+    background-color: rgb(27, 177, 94);
+}
+
+button.cancel
+{
+    background-color: rgb(231, 132, 18);
+}
+
+table.table
+{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+}
+
+table.table tr td,
+table.table tr th
+{
+    padding: 4px 10px;
+}
+
+table.table thead
+{
+    background-color: #fff5;
+}
+
+table.table tbody tr
+{
+    border-top: 1px solid #fff5;
+}
+
+.css_modalList
+{
+    width: 400px;
+    padding-right: 15px;
+    border-right: 1px solid #fff5;
+    max-height: 255px;
+    overflow: auto;
+}
+
+.css_modalForm
+{
+    width: calc(100% - 400px);
+    padding-left: 15px;
+}
+
+.css_modalForm label
+{
+    color: white;
+    font-weight: normal;
+    font-size: .9em;
+    opacity: .8;
+}
+
+.css_modalForm input
+{
+    border-radius: 4px;
+    border: 1px solid #0005;
+    background-color: #8888;
+    padding: 10px;
+    color: white;
+}
+
+.w100
+{
+    width: 100%;
+}
